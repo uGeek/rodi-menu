@@ -2,7 +2,7 @@
 
 A variety of convenient menus made mainly using [rofi](https://github.com/davatorium/rofi) and its dmenu emulation.
 
-[Here is a showcase](https://gitlab.com/vahnrr/rofi_menus/blob/master/colorschemes.md) of the current colorschemes.
+[Here is a showcase](https://gitlab.com/vahnrr/rofi-menus/blob/master/colorschemes.md) of the current colorschemes.
 
 ## List of menus
 
@@ -77,7 +77,7 @@ Take screenshots using [scrot](https://github.com/dreamer/scrot).
 
 These screenshots use the 'Dark steel-blue' from this [set of dotfiles](https://gitlab.com/vahnrr/dots/blob/master/i3-dark-steel-blue), on this repo the colors are located in `themes(<resolution>)/shared/colorschemes/dark-steel-blue.rasi`. You can change the menus theme in `~/.config/rofi/themes/shared/settings.rasi`, by editing the line `@import "<colorscheme>.rasi"`.
 
-A few other themes are located there too ([here is a showcase](https://gitlab.com/vahnrr/rofi_menus/blob/master/colorschemes.md)), do not hesitate to make a pull request if you have made a nice looking colorscheme and wan to share it!
+A few other themes are located there too ([here is a showcase](https://gitlab.com/vahnrr/rofi-menus/blob/master/colorschemes.md)), do not hesitate to make a pull request if you have made a nice looking colorscheme and wan to share it!
 
 ---
 
@@ -200,7 +200,7 @@ bindsym $mod+0                  exec --no-startup-id powermenu
 bindsym $mod+s                  exec --no-startup-id scrotmenu
 ```
 
-**Note:** You would need to do [this](https://gitlab.com/vahnrr/rofi_menus#optionnal) to be able to call the menus this way, otherwise just execute the menus' script.
+**Note:** You would need to do [this](https://gitlab.com/vahnrr/rofi-menus#optionnal) to be able to call the menus this way, otherwise just execute the menus' script.
 
 ## TODO
 
