@@ -23,7 +23,7 @@ if [ -n "$active" ]; then
         [ "${list[i]}" == "$active" ] && unset "list[i]" || options+="\n${list[i]}"
     done
 # No vpn is active
-else
+elif [ -n "$chosen" ]; then
     status="   Disconnected"
     status_style="#prompt { background-color: @off; }"
     special=""
