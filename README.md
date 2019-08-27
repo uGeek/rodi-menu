@@ -2,6 +2,8 @@
 
 A variety of convenient menus made mainly using [rofi](https://github.com/davatorium/rofi) and its dmenu emulation.
 
+A video showcasing the menus in action is available [here](https://old.reddit.com/r/unixporn/comments/cvqc6s/oc_handy_menus_made_with_rofi/).
+
 [Here is a showcase](https://gitlab.com/vahnrr/rofi-menus/blob/master/colorschemes.md) of the current colorschemes.
 
 ## List of menus
