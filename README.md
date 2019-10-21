@@ -85,7 +85,19 @@ A few other themes are located there too ([here is a showcase](https://gitlab.co
 
 Want to use a different colorscheme for some specific menu? Add the `@import "<colorscheme>.rasi"` line in the chosen menu theme file right after the line importing the settings.
 
-## Menus dependencies and fixes
+## Installation
+
+### Arch Linux
+
+The package is available in the Arch User Repository as [rofi-menus-git](https://aur.archlinux.org/packages/rofi-menus-git)
+
+```
+yay -S rofi-menus-git
+```
+
+### Manual installation
+
+#### Menus dependencies and fixes
 
 First of all make sure you have `rofi` installed:
 ```bash
@@ -99,7 +111,7 @@ dnf install rofi
 
 These menus have been made on my machines (1366x768 and 1920x1080 resolutions) with rofi version **1.5.4-1**, they *might* not work on earlier version although it should be fine.
 
-### Fonts
+##### Fonts
 
 The menus uses 3 fonts:
 
@@ -111,37 +123,37 @@ If you wish to change them dig in the resolution file you are using: `~/.config/
 
 **Warning:** changing the `@icon-font` variable to another font has a high chance of messing most menus' layout.
 
-### Apps menu
+##### Apps menu
 
 The icon theme used is [Paper](https://github.com/snwh/paper-icon-theme), you either need to install it or to change the icon theme to use in `~/.config/rofi/config.rasi`.
 
-### i3 layout menu
+##### i3 layout menu
 
 This menu is supposed to work with i3 so if you do not use i3 as your window manager you should not be using it.
 
-### MPD menu
+##### MPD menu
 
 To interact with MPD, this menu uses the `mpc` package, make sure you have it installed.
 
-### Network menu
+##### Network menu
 
 Written in Python, make sure you have it installed, if some functionnalities do not work you might want to get a newer version of this script [here](https://github.com/firecat53/networkmanager-dmenu) or check the issues there to see if someone encountered a similar problem.
 
 Also, make sure you have copied the `networkmanager-dmenu` directory and its content (the `config.ini` file) and placed it in `~/.config/`. You might want to change the terminal defined in `~/.config/networkmanager-dmenu/config.ini` since I use `xfce4-terminal` but you might prefer another one.
 
-### Network Manager VPN menu
+##### Network Manager VPN menu
 
 Since the `mapfile` bash command is used, you will need bash with the version **4** or above to run the script of this menu.
 
 To interact with Network Manager, this script uses `nmcli`, but also `grep` and `sed` to parse data, so make sure those are installed.
 
-### Power menu
+##### Power menu
 
 It uses `systemctl` to handle most power actions, but also `light-locker` to lock and `i3-msg exit` to log out since I use an i3 session, you might want to tweak this to fit your config.
 
 Also when going to sleep this script pauses MPD using an `mpc` command and mutes the volume using `amixer`, so have these on your system or delete these lines in `powermenu.sh`.
 
-### Screenshot menu
+##### Screenshot menu
 
 Make sure you have `scrot` installed.
 
@@ -161,7 +173,7 @@ case $chosen in
 esac
 ```
 
-## How to install and use
+#### How to install and use
 
 1. Copy the `config.rasi` file to `~/.config/rofi/` (mainly used by the **appsmenu**, but removing it seems to screw with other menus' theme)
 2. Copy the `scripts` directory to `~/.config/rofi/` (you can delete the menus you won't use)
@@ -169,7 +181,7 @@ esac
 4. Copy the `themes` directory to `~/.config/rofi/` (you can delete the menus you won't use)
 5. Set the resolution to use in `~/.config/rofi/themes/shared/settings.rasi`. If the resolution you want to use is not in the `~/.config/rofi/themes/shared/resolutions` directory, you can copy one of the existing ones and adjust a few variables to make it fit your resolution. The main variables to play around with are `*-window-padding`, `*-listview-spacing` and `*-element-padding`. Do not hesitate to open a pull request to share your custom resolution variables file on this repo for others to use.
 
-### Optionnal
+##### Optional
 
 > To make it easier to call those menus, you can use the `/usr/local/bin` directory.
 
@@ -207,4 +219,3 @@ bindsym $mod+s                  exec --no-startup-id scrotmenu
 ## TODO
 
 - Find a cleaner way to wait for the first `nmcli` command to be successful in `nmvpnmenu.sh` (line **46**) as without the `sleep 1` it will throw an error, but waiting 1 second is not a safe work around
-
