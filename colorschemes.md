@@ -76,6 +76,44 @@
 
 ![scrotmenu](screenshots/dark-steel-blue/scrotmenu.png)
 
+## gruvbox.rasi
+
+### Apps menu
+
+![appsmenu](screenshots/gruvbox/appsmenu.png)
+
+### i3 layout menu
+
+![i3layoutmenu](screenshots/gruvbox/i3layoutmenu.png)
+
+### MPD menu
+
+![mpdmenu](screenshots/gruvbox/mpdmenu.png)
+
+### Network menu
+
+![networkmenu](screenshots/gruvbox/networkmenu.png)
+
+### Network Manager VPN menu
+
+![nmvpnmenu_connected](screenshots/gruvbox/nmvpnmenu_connected.png)
+
+![nmvpnmenu_disconnected](screenshots/gruvbox/nmvpnmenu_disconnected.png)
+
+### Power menu
+
+![powermenu](screenshots/gruvbox/powermenu.png)
+
+### Prompt menu
+
+![promptmenu_yes_selected](screenshots/gruvbox/promptmenu_yes_selected.png)
+
+![promptmenu_no_selected](screenshots/gruvbox/promptmenu_no_selected.png)
+
+### Scrot menu / Maim menu
+
+![scrotmenu](screenshots/gruvbox/scrotmenu.png)
+
 ## light-blue.rasi
 
 ### Apps menu
