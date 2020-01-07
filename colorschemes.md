@@ -28,7 +28,13 @@
 
 ![powermenu](screenshots/dark-amber/powermenu.png)
 
-### Scrot menu
+### Prompt menu
+
+![promptmenu_yes_selected](screenshots/dark-amber/promptmenu_yes_selected.png)
+
+![promptmenu_no_selected](screenshots/dark-amber/promptmenu_no_selected.png)
+
+### Scrot menu / Maim menu
 
 ![scrotmenu](screenshots/dark-amber/scrotmenu.png)
 
@@ -60,7 +66,13 @@
 
 ![powermenu](screenshots/dark-steel-blue/powermenu.png)
 
-### Scrot menu
+### Prompt menu
+
+![promptmenu_yes_selected](screenshots/dark-steel-blue/promptmenu_yes_selected.png)
+
+![promptmenu_no_selected](screenshots/dark-steel-blue/promptmenu_no_selected.png)
+
+### Scrot menu / Maim menu
 
 ![scrotmenu](screenshots/dark-steel-blue/scrotmenu.png)
 
@@ -92,7 +104,13 @@
 
 ![powermenu](screenshots/light-blue/powermenu.png)
 
-### Scrot menu
+### Prompt menu
+
+![promptmenu_yes_selected](screenshots/light-blue/promptmenu_yes_selected.png)
+
+![promptmenu_no_selected](screenshots/light-blue/promptmenu_no_selected.png)
+
+### Scrot menu / Maim menu
 
 ![scrotmenu](screenshots/light-blue/scrotmenu.png)
 

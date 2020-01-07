@@ -6,112 +6,39 @@ A video showcasing the menus in action is available [here](https://old.reddit.co
 
 [Here is a showcase](https://gitlab.com/vahnrr/rofi-menus/blob/master/colorschemes.md) of the current colorschemes.
 
-## List of menus
+![menus-gallery](screenshots/menus-gallery.png)
 
-### Apps menu
+**List of menus:**
+- **Apps:** call rofi in its drun mode to start desktop programmes
+- **i3 layout:** change the current layout of [i3wm](https://github.com/i3/i3)
+- **MPD:** control the song you play through [mpd (the Music Player Daemon)](https://github.com/MusicPlayerDaemon/)
+- **Network:** Network Manager menu (a themed version of [this original script](https://github.com/firecat53/networkmanager-dmenu))
+- **Network Manager VPN:** manage your active vpn connection in a few keystrokes
+- **Power:** a classic power menu
+- **Screenshot:** take screenshots using either [scrot](https://github.com/dreamer/scrot) or [maim](https://github.com/naelstrof/maim)
+- **Prompt:** a simple customisable prompt to ask for confirmation before executing some given instruction
 
-> appsmenu
+1. [Requirements](https://gitlab.com/vahnrr/rofi-menus#requirements)
+    - [Fonts](https://gitlab.com/vahnrr/rofi-menus#fonts)
+    - [Packages](https://gitlab.com/vahnrr/rofi-menus#packages)
+2. [Installation](https://gitlab.com/vahnrr/rofi-menus#installation)
+    - [Arch Linux](https://gitlab.com/vahnrr/rofi-menus#arch-linux)
+    - [Manual installation](https://gitlab.com/vahnrr/rofi-menus#manual-installation)
+3. [Troubleshooting](https://gitlab.com/vahnrr/rofi-menus#troubleshooting)
+4. [Tweaks](https://gitlab.com/vahnrr/rofi-menus#tweaks)
+    - [Simpler menu summoning](https://gitlab.com/vahnrr/rofi-menus#simpler-menu-summoning)
+    - [Change the colorscheme](https://gitlab.com/vahnrr/rofi-menus#change-the-colorscheme)
+    - [Monitor resolution](https://gitlab.com/vahnrr/rofi-menus#monitor-resolution)
+    - [Use in i3](https://gitlab.com/vahnrr/rofi-menus#use-in-i3)
+    - [Transparent theme](https://gitlab.com/vahnrr/rofi-menus#transparent-theme)
+5. [Contributing](https://gitlab.com/vahnrr/rofi-menus#contributing)
+    - [New resolutions](https://gitlab.com/vahnrr/rofi-menus#new-resolutions)
+    - [New colorschemes](https://gitlab.com/vahnrr/rofi-menus#new-colorschemes)
+    - [Things that could be improved](https://gitlab.com/vahnrr/rofi-menus#things-that-could-be-improved)
 
-Call rofi in its drun mode to start desktop programmes.
+## Requirements
 
-![appsmenu](screenshots/dark-steel-blue/appsmenu.png)
-
-### i3 layout menu
-
-> i3layoutmenu
-
-Change the current layout of [i3wm](https://github.com/i3/i3).
-
-![i3layoutmenu](screenshots/dark-steel-blue/i3layoutmenu.png)
-
-### MPD menu
-
-> mpdmenu
-
-Control the song you play through [mpd (the Music Player Daemon)](https://github.com/MusicPlayerDaemon/).
-
-![mpdmenu](screenshots/dark-steel-blue/mpdmenu.png)
-
-**Functionnalities:**
-- The first 4 options do what you expect them to do
-- *(For repeat and random only)* Green means on and red means off, choosing these will toggle them
-
-### Network menu
-
-> networkmenu
-
-Network manager menu (a themed version of [this original script](https://github.com/firecat53/networkmanager-dmenu)).
-
-![networkmenu](screenshots/dark-steel-blue/networkmenu.png)
-
-### Network Manager VPN menu
-
-> nmvpnmenu
-
-Manage your active vpn connection in a few keystrokes.
-
-![nmvpnmenu_connected](screenshots/dark-steel-blue/nmvpnmenu_connected.png)
-
-![nmvpnmenu_disconnected](screenshots/dark-steel-blue/nmvpnmenu_disconnected.png)
-
-**Functionnalities:**
-- *(Connected)* Choosing the active (green one) option will disconnect from the active vpn
-- *(Connected)* Choosing another option than the active vpn will disconnect from the active vpn and connected to the chosen one
-- *(Disconnected)* Choosing an option will simply connect to this vpn
-
-### Power menu
-
-> powermenu
-
-A classic power menu.
-
-![powermenu](screenshots/dark-steel-blue/powermenu.png)
-
-### Screenshot menu
-
-> scrotmenu
-
-Take screenshots using [scrot](https://github.com/dreamer/scrot).
-
-![scrotmenu](screenshots/dark-steel-blue/scrotmenu.png)
-
-## Use custom colors
-
-These screenshots use the 'Dark steel-blue' from this [set of dotfiles](https://gitlab.com/vahnrr/dots/blob/master/i3-dark-steel-blue), on this repo the colors are located in `themes(<resolution>)/shared/colorschemes/dark-steel-blue.rasi`. You can change the menus theme in `~/.config/rofi/themes/shared/settings.rasi`, by editing the line `@import "<colorscheme>.rasi"`.
-
-A few other themes are located there too ([here is a showcase](https://gitlab.com/vahnrr/rofi-menus/blob/master/colorschemes.md)), do not hesitate to make a pull request if you have made a nice looking colorscheme and wan to share it!
-
----
-
-Want to use a different colorscheme for some specific menu? Add the `@import "<colorscheme>.rasi"` line in the chosen menu theme file right after the line importing the settings.
-
-## Installation
-
-### Arch Linux
-
-The package is available in the Arch User Repository as [rofi-menus-git](https://aur.archlinux.org/packages/rofi-menus-git)
-
-```
-yay -S rofi-menus-git
-```
-
-### Manual installation
-
-#### Menus dependencies and fixes
-
-First of all make sure you have `rofi` installed:
-```bash
-# Arch / Arch-based
-pacman -S rofi
-# Debian / Ubuntu
-apt-get install rofi
-# Fedora
-dnf install rofi
-```
-
-These menus have been made on my machines (1366x768 and 1920x1080 resolutions) with rofi version **1.5.4-1**, they *might* not work on earlier version although it should be fine.
-
-##### Fonts
+### Fonts
 
 The menus uses 3 fonts:
 
@@ -123,99 +50,202 @@ If you wish to change them dig in the resolution file you are using: `~/.config/
 
 **Warning:** changing the `@icon-font` variable to another font has a high chance of messing most menus' layout.
 
-##### Apps menu
+### Packages
 
-The icon theme used is [Paper](https://github.com/snwh/paper-icon-theme), you either need to install it or to change the icon theme to use in `~/.config/rofi/config.rasi`.
-
-##### i3 layout menu
-
-This menu is supposed to work with i3 so if you do not use i3 as your window manager you should not be using it.
-
-##### MPD menu
-
-To interact with MPD, this menu uses the `mpc` package, make sure you have it installed.
-
-##### Network menu
-
-Written in Python, make sure you have it installed, if some functionnalities do not work you might want to get a newer version of this script [here](https://github.com/firecat53/networkmanager-dmenu) or check the issues there to see if someone encountered a similar problem.
-
-Also, make sure you have copied the `networkmanager-dmenu` directory and its content (the `config.ini` file) and placed it in `~/.config/`. You might want to change the terminal defined in `~/.config/networkmanager-dmenu/config.ini` since I use `xfce4-terminal` but you might prefer another one.
-
-##### Network Manager VPN menu
-
-Since the `mapfile` bash command is used, you will need bash with the version **4** or above to run the script of this menu.
-
-To interact with Network Manager, this script uses `nmcli`, but also `grep` and `sed` to parse data, so make sure those are installed.
-
-##### Power menu
-
-It uses `systemctl` to handle most power actions, but also `light-locker` to lock and `i3-msg exit` to log out since I use an i3 session, you might want to tweak this to fit your config.
-
-Also when going to sleep this script pauses MPD using an `mpc` command and mutes the volume using `amixer`, so have these on your system or delete these lines in `powermenu.sh`.
-
-##### Screenshot menu
-
-Make sure you have `scrot` installed.
-
-**Note:** I personally use [i3-script](https://gitlab.manjaro.org/packages/community/i3/i3-scrot) which a verbose wrapper for scrot, sending notifications informing the user of what is happening. The code in `scrotmenu.sh` changes a bit to this:
-```bash
-# [...]
-case $chosen in
-    $screen)
-        sleep 1; i3-scrot -d
-        ;;
-    $area)
-        i3-scrot -s
-        ;;
-    $window)
-        sleep 1; i3-scrot -w
-        ;;
-esac
+First of all make sure you have `rofi` installed:
+``` bash
+# Arch / Arch-based
+pacman -S rofi
+# Debian / Ubuntu
+apt-get install rofi
+# Fedora
+dnf install rofi
 ```
 
-#### How to install and use
+These menus have been made on my machines (1366x768 and 1920x1080 resolutions) with rofi version **1.5.4**, they *might* not work on earlier version although it should be fine.
 
-1. Copy the `config.rasi` file to `~/.config/rofi/` (mainly used by the **appsmenu**, but removing it seems to screw with other menus' theme)
-2. Copy the `scripts` directory to `~/.config/rofi/` (you can delete the menus you won't use)
-3. Make sure those scripts are executables with the command: `chmod +x ~/.config/rofi/scripts/*`
-4. Copy the `themes` directory to `~/.config/rofi/` (you can delete the menus you won't use)
-5. Set the resolution to use in `~/.config/rofi/themes/shared/settings.rasi`. If the resolution you want to use is not in the `~/.config/rofi/themes/shared/resolutions` directory, you can copy one of the existing ones and adjust a few variables to make it fit your resolution. The main variables to play around with are `*-window-padding`, `*-listview-spacing` and `*-element-padding`. Do not hesitate to open a pull request to share your custom resolution variables file on this repo for others to use.
+#### Dependencies for each menus
 
-##### Optional
+| Menu       | Package(s)                                                   | Note(s)                                                                                                                                                                                                                                                                 |
+|------------|--------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Apps       | [Paper icon theme](https://github.com/snwh/paper-icon-theme) | Any icon theme would do the job, you can change this in *~/.config/rofi/config.rasi*                                                                                                                                                                                    |
+| i3 layout  | `i3`                                                         | -                                                                                                                                                                                                                                                                       |
+| MPD        | `mpd` and `mpc`                                              | `mpc` is used to interact with `mpd`                                                                                                                                                                                                                                    |
+| Network    | `python`                                                     | This script comes from [here](https://github.com/firecat53/networkmanager-dmenu), so if you encounter problems, check the issues there                                                                                                                                  |
+| VPN        | `nmcli`, `grep`, `sed` and `bash` >= 4                       | The `mapfile` bash command is used, so `bash` >= 4 is necessary                                                                                                                                                                                                         |
+| Power      | `systemctl`, `light-locker`, `mpc`                           | By default `systemctl` is used for most actions, `light-locker` is used for locking/sleeping, `i3-msg exit` is used to log out and `mpc`/`amixer` are used to pause and mute the music when going to sleep, you might want to change these commands to match your setup |
+| Screenshot | `scrot` or `maim` (+ `xdotool` and `xclip`)                  |                                                                                                                                                                                                                                                                         |
 
-> To make it easier to call those menus, you can use the `/usr/local/bin` directory.
+## Installation
 
-1. Create the directory (if it doesn't exist): `sudo mkdir -p /usr/local/bin`
-2. Copy the content of the `bins` directory to `/usr/local/bin/`
-3. Make yourself (or the user group) the owner of these files so that you can call them without needing root: `sudo chown <username> /usr/local/bin/*menu`
-4. Make sure those scripts are executables with the command: `sudo chmod +x /usr/local/bin/*`
-5. Test in a new terminal or with an i3 keybinding to call these menus with a simple `<menuname>` command
+After installing please make sure you're using the right resolution, please see [this section](https://gitlab.com/vahnrr/rofi-menus#monitor-resolution).
 
-**Note:** I keep those files in `/usr/local/bin/`, but they are not the actual scripts that you will be running, they will simply call the scripts located in `~/.config/rofi/scripts/`, it is a personnal preference. You could copy the content of `scripts` in `/usr/local/bin/` and it would work like a charm too (although you might want to remove the `.sh` at the end of these in this case). This would be useful if multiple users are supposed to be able to call these menus.
+### Arch Linux
+
+The package is available in the Arch User Repository as [rofi-menus-git](https://aur.archlinux.org/packages/rofi-menus-git).
+
+```
+yay -S rofi-menus-git
+```
+
+You can then call the menus with these commands:
+
+``` bash
+rofi-appsmenu
+rofi-i3layout
+rofi-mpd
+rofi-network
+rofi-power
+rofi-scrot
+rofi-vpn
+```
+
+### Manual installation
+
+``` bash
+# 1. Go in rofi's config folder
+cd ~/.config/rofi
+# 2. Copy this repo
+git clone https://gitlab.com/vahnrr/rofi-menus.git
+# 3. Make sure the scripts are executables
+cd rofi-menus && chmod +x scripts/*
+# 4. Copy necessary files to the right location
+cp -r scripts themes config.rasi ~/.config/rofi
+cp -r networkmanager-dmenu ~/.config
+# 5. Clean up rofi's config folder
+cd .. && rm -r rofi-menus
+# 6. Call the scripts (from the scripts folder)
+cd scripts
+./appsmenu.sh
+# (or from anywhere)
+. ~/.config/rofi/scripts/appsmenu.sh
+```
+
+**Note:** you might want to summon these menus simply by calling the `appsmenu` command, if so, please follow [these instructions](https://gitlab.com/vahnrr/rofi-menus#simpler-menu-summoning).
+
+## Troubleshooting
+
+**First,** check that you have everything (fonts and packages) you need for the menus you want to use in the [Requirements](https://gitlab.com/vahnrr/rofi-menus#requirements) section.
+**Then** check your rofi version, I can confirm that it works well with rofi >= **1.5.4**, so make sure you have at least this version.
 
 ---
 
-> **Required** to use the networkmenu.
+> Menus don't show or only show on part of the screen
 
-1. Copy the `networkmanager-dmenu` directory in `~/.config/`
+Currently these menus only support the following resolutions:
+- 1366x768
+- 1920x1080
+
+So make sure you're using the right resolution in *~/.config/rofi/themes/shared/settings.rasi*.
+If you have a resolution that is not included in the above list, check [this section](https://gitlab.com/vahnrr/rofi-menus#New-resolutions).
+
+---
+
+Don't find any solution? If you checked all the above then consider opening an issue on this repository.
+
+## Tweaks
+
+### Simpler menu summoning
+
+You can add your scripts folder to your `$PATH` variable so that entering `appsmenu` in the terminal (or executing this command) will summon the appsmenu.
+
+The way I do it:
+- I store a symlink to my scripts in *~/.local/bin*
+- I then add this folder to my `$PATH` using the *~/.profile* file
+
+``` bash
+mkdir ~/.local/bin
+# Creates the symlinks to the scripts
+ln -s ~/.config/rofi/scripts/appsmenu.sh ~/.local/bin/appsmenu
+ln -s ~/.config/rofi/scripts/i3layoutmenu.sh ~/.local/bin/i3layoutmenu
+ln -s ~/.config/rofi/scripts/maimmenu.sh ~/.local/bin/maimmenu
+ln -s ~/.config/rofi/scripts/mpdmenu.sh ~/.local/bin/mpdmenu
+ln -s ~/.config/rofi/scripts/networkmenu.py ~/.local/bin/networkmenu
+ln -s ~/.config/rofi/scripts/nmvpnmenu.sh ~/.local/bin/nmvpnmenu
+ln -s ~/.config/rofi/scripts/powermenu.sh ~/.local/bin/powermenu
+ln -s ~/.config/rofi/scripts/promptmenu.sh ~/.local/bin/promptmenu
+ln -s ~/.config/rofi/scripts/scrotmenu.sh ~/.local/bin/scrotmenu
+# Add our folder to the $PATH variable
+echo "PATH=$PATH:~/.local/bin" >> ~/.profile
+```
+
+**Note:** after doing this your `$PATH` variable won't be updated, so you will need to log out and then back in to be able to summon the menus this way.
+
+By changing the second path given to `ls` you can change the command to type to summon the menu.
+
+### Change the colorscheme
+
+[Here is a showcase](https://gitlab.com/vahnrr/rofi-menus/blob/master/colorschemes.md) of the current colorschemes.
+The files are stored in *~/.config/rofi/themes/shared/colorschemes*.
+To change the active colorscheme simply change the import line in *~/.config/rofi/themes/shared/settings.rasi*.
+
+If you wish to change the colorscheme for only one specific menu, you can add the line bellow to the *~/.config/rofi/themes/<menu-name>.rasi* file.
+
+``` css
+@import "shared/colorschemes/<colorscheme-name>.rasi"
+```
+
+**Note:** it needs to be added **after** the `@import "shared/settings.rasi"` otherwise it would not overwrite the theme from the settings file.
+
+### Monitor resolution
+
+**By default** the menus will use the 1920x1080 resolution.
+The files are stored in *~/.config/rofi/themes/shared/resolutions*.
+To change the active resolution simply change the import line in *~/.config/rofi/themes/shared/settings.rasi*.
+
+If you don't find the resolution you are using, then please check [this section](https://gitlab.com/vahnrr/rofi-menus#new-resolutions).
 
 ### Use in i3
 
-Here is a sample of my i3 config where I defined keybindings to use these menus:
+You can call the scripts by giving their fulls paths like *~/.config/rofi/scripts/<script-name>.sh* or follow [these instructions](https://gitlab.com/vahnrr/rofi-menus#simpler-menu-summoning) to call the menus in one word.
+
+Then add these lines to your i3 config file:
 ```
 set $mod Mod4
 set $Alt Mod1
-bindsym $mod+d                  exec --no-startup-id appsmenu
-bindsym $mod+l                  exec --no-startup-id i3layoutmenu
-bindsym $mod+m                  exec --no-startup-id mpdmenu
-bindsym $mod+n                  exec --no-startup-id networkmenu
-bindsym $Alt+v                  exec --no-startup-id nmvpnmenu
-bindsym $mod+0                  exec --no-startup-id powermenu
-bindsym $mod+s                  exec --no-startup-id scrotmenu
+bindsym $mod+d exec --no-startup-id appsmenu
+bindsym $mod+l exec --no-startup-id i3layoutmenu
+bindsym $mod+m exec --no-startup-id mpdmenu
+bindsym $mod+n exec --no-startup-id networkmenu
+bindsym $Alt+v exec --no-startup-id nmvpnmenu
+bindsym $mod+p exec --no-startup-id powermenu
+bindsym $mod+s exec --no-startup-id maimmenu
 ```
 
-**Note:** You would need to do [this](https://gitlab.com/vahnrr/rofi-menus#optionnal) to be able to call the menus this way, otherwise just execute the menus' script.
+### Transparent theme
 
-## TODO
+Because the `background` variable in colorschemes is re-used in the `#horibox` and `#listview` you cannot achieve clean transparency without a few tweaks:
+- In *~/.config/rofi/themes/shared/<chosen-colorscheme>.rasi* change the `background` variable to something like `#1c1c1caa`, the last 2 characters being the amount of transparency to use
+- Then in *~/.config/rofi/themes/shared/option-menu.rasi* add `background-color: #00000000;` to the following entries: `#horibox` and `#listview`
 
-- Find a cleaner way to wait for the first `nmcli` command to be successful in `nmvpnmenu.sh` (line **46**) as without the `sleep 1` it will throw an error, but waiting 1 second is not a safe work around
+## Contributing
+
+### New resolutions
+
+Copy one of the resolution file in *~/.config/rofi/themes/shared/resolutions* to the new one (i.e *1024x768.rasi*).
+
+Then tweaks the values so that the menus display properly on your screen, the ones you'll most likely have to change are:
+- `*-window-padding`: the whole canvas surounding the controls
+- `*-element-padding`: the blank space around the icons/texts
+
+### New colorschemes
+
+These menus were initially published with 3 colorschemes, a fourth has been added after someone contributed his colorscheme file (*gruvbox.rasi*).
+So if you have made your own and want to contribute, don't hesitate to open a merge request, including your *<colorscheme>.rasi* and screenshots (also added to *colorschemes.md*).
+
+The colorschemes are located in the *~/.config/rofi/themes/shared/colorschemes* folder.
+
+### Things that could be improved
+
+**Universal resolution:** by using percentages instead of raw pixel values in the resolution files, it might be possible to create a universal resolution file.
+
+---
+
+Find a cleaner way to wait for the first `nmcli` command to be successful in *~/.config/rofi/scripts/nmvpnmenu.sh* as without the `sleep 1` it will throw an error.
+But waiting 1 second is neither a safe nor a clean work around.
+
+---
+
+**Widget themes:** for now the menus are full screen, which does not suit everyone, there could be an option to call the scripts with (i.e `appsmenu --widget`).
+This option would load an alternative resolution file (i.e *1920x1080-widget.rasi*) and would only display a little window for the menus.
+
